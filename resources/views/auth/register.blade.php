@@ -2,51 +2,58 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- Name -->
+        <!-- Nome -->
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <x-input-label for="Nome" :value="__('Nome')" />
+            <x-text-input id="nome" class="block mt-1 w-full" type="text" name="nome" :value="old('nome')" required autofocus autocomplete="nome" />
+            <x-input-error :messages="$errors->get('nome')" class="mt-2" />
         </div>
 
-        <!-- Email Address -->
+        <!-- Endereço -->
         <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-input-label for="Endereço" :value="__('Endereço')" />
+            <x-text-input id="endereco" class="block mt-1 w-full" type="text" name="endereco" :value="old('endereco')" required autocomplete="endereco" />
+            <x-input-error :messages="$errors->get('endereco')" class="mt-2" />
         </div>
 
-        <!-- Password -->
+        <!-- Bairro -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <x-input-label for="Bairro" :value="__('Bairro')" />
+            <x-text-input id="bairro" class="block mt-1 w-full" type="text" name="bairro" :value="old('bairro')" required autocomplete="bairro" />
+            <x-input-error :messages="$errors->get('bairro')" class="mt-2" />
         </div>
 
-        <!-- Confirm Password -->
+        <!-- CEP -->
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+            <x-input-label for="CEP" :value="__('CEP')" />
+            <x-text-input id="cep" class="block mt-1 w-full" type="text" name="cep" :value="old('cep')" required autocomplete="cep" />
+            <x-input-error :messages="$errors->get('cep')" class="mt-2" />
+        </div>
 
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password" />
+        <!-- Cidade -->
+        <div class="mt-4">
+            <x-input-label for="Cidade" :value="__('Cidade')" />
+            <x-text-input id="cidade" class="block mt-1 w-full" type="text" name="cidade" :value="old('cidade')" required autocomplete="cidade" />
+            <x-input-error :messages="$errors->get('cidade')" class="mt-2" />
+        </div>
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <!-- Estado -->
+        <div class="mt-4">
+            <x-input-label for="Estado" :value="__('Estado')" />
+            <x-text-input id="estado" class="block mt-1 w-full" type="text" name="estado" :value="old('estado')" required autocomplete="estado" />
+            <x-input-error :messages="$errors->get('estado')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
+                {{ __('Já está está registrado?') }}
             </a>
 
             <x-primary-button class="ml-4">
-                {{ __('Register') }}
+                {{ __('Registrar-se') }}
             </x-primary-button>
         </div>
     </form>
+    <br>
 </x-guest-layout>
+<br>
